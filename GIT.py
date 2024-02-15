@@ -88,12 +88,12 @@ for i in range(len(prop)):
         
         # The magnetic field must be such that Be<B<Bi
         Be = me*ve_th/(e*L[k])*1e4 # Gauss
-        Bi = mi*vi_th/(e*L[k])*1e4
+        Bi = mi*vi_th/(e*L[k])*1e4 # Gauss
         B.append((Be+Bi)/2) # Gauss
 
     fig, ax1=plt.subplots()
     
-    plt.title('GIT with 1.4 mm diameter grid holes')
+    plt.title(str(prop[i])+' GIT with 1.4 mm diameter grid holes')
     ax1.plot(eta_holes,L,label='Chamber length (m)',c='r')
     ax1.set_xlabel('% of holes in the grid')
     ax1.set_ylabel('Length of the chamber (m)')
